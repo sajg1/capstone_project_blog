@@ -12,8 +12,6 @@ def home():
 
 @app.route("/blog/<id>/<title>/<subtitle>/<body>")
 def get_blog(id, title, subtitle, body):
-    print(type(title))
-    print(title)
     return render_template("post.html", post_title=title, post_sub=subtitle, post_bod=body)
 
 
