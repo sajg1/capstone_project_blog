@@ -14,10 +14,9 @@
     <div class="content">
         {% for post in posts %}
             <div class="card">
-                <h2>{{ post['title'] }}</h2>
-                <p class="text">{{ post['subtitle'] }} </p>
-                <a href="{{ url_for('get_blog', id=post['id'], title=post['title'], subtitle=post['subtitle'],
-                 body=post['body']) }}">Read</a>
+                <h2>{{ post.get_title() }}</h2>
+                <p class="text">{{ post.get_subtitle() }} </p>
+                <a href="{{ url_for('get_blog', id=post.get_id()) }}">Read</a>
             </div>
         {% endfor %}
     </div>

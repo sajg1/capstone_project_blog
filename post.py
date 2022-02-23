@@ -5,6 +5,8 @@ class Post():
         self.subtitle = subtitle
         self.body = body
 
+    def get_id(self):
+        return self.id
     def get_title(self):
         return self.title
 

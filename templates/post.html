@@ -13,9 +13,9 @@
         </div>
        `<div class="content">
             <div class="card">
-                <h2>{{ post_title }}</h2>
-                <h3>{{ post_sub }}</h3>
-                <p>{{ post_bod }}</p>
+                <h2>{{ post.get_title() }}</h2>
+                <h3>{{ post.get_subtitle() }}</h3>
+                <p>{{ post.get_body() }}</p>
                 <br>
                 <a href="{{ url_for('home') }}">Back</a>
             </div>
